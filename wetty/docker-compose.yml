@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  wetty:
+    build:
+      context: .
+      args:
+        USER: some_user
+        PASS: some_password
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=Wetty"
+      - "traefik.frontend.rule=Host:wetty.domain.ltd"
+      - "traefik.port=3000"
+    networks:
+      - wetty
+    restart: always
+
+networks:
+  wetty:
+    external:
+      name: traefik_watcher

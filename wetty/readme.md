@@ -15,7 +15,8 @@ Terminal over HTTP ~and HTTPS~. Wetty is an alternative to ajaxterm/anyterm but 
 ### Exposing external port
 
 `$ docker run --name some-name -p 80:3000 -d xylphid/wetty:latest`
-Then you can hit `http://localhost/` or `http://host-ip`in your browser.
+Then you can hit `http://localhost/` or `http://host-ip`in your browser and log in with user *wetty* and password *wetty*.
+
 
 
 ## How to compose with this image

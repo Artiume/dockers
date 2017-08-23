@@ -4,7 +4,8 @@
 
 ## Supported tags
 
-* `1`, `1.4`, `1.4.4`
+* `1`, `1.4`, `1.4.4` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/play-framework/1/4/Dockerfile))
+* `1-alpine`, `1.4-alpine`, `1.4.4-alpine` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/play-framework/1/4-alpine/Dockerfile))
 
 ## How to use this image
 

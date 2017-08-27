@@ -10,7 +10,7 @@ LABEL description="Play Framework v${PLAY_VERSION}"
 
 
 # Play Framework installation
-RUN apk add --no-cache --quiet curl && \
+RUN apk add --no-cache --quiet curl python && \
 	mkdir -p /opt/play && cd /opt/play && \
 	# Download play framework
 	curl --fail --silent --show-error --location --remote-name https://downloads.typesafe.com/play/${PLAY_VERSION}/play-${PLAY_VERSION}.zip && \

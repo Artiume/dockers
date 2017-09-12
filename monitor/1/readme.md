@@ -4,7 +4,7 @@
 
 ## Supported tags
 
-* `1`, `1.0`, `1.0.2`, `latest` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/monitor/1/Dockerfile))
+* `1-arm`, `1.0-arm`, `1.0.2-arm`, `latest` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/monitor/1/Dockerfile))
 
 ## How to use this image
 

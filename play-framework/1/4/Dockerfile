@@ -13,18 +13,19 @@ LABEL description="Play Framework v${PLAY_VERSION}"
 RUN mkdir -p /opt/play && cd /opt/play && \
 	# Download play framework
 	wget https://downloads.typesafe.com/play/${PLAY_VERSION}/play-${PLAY_VERSION}.zip && \
-	# Extract and move to destination
-	unzip play-${PLAY_VERSION}.zip && \
+	# Extract and clean archive
+	unzip play-${PLAY_VERSION}.zip && rm play-${PLAY_VERSION}.zip && \
 	# Set execution
-	chmod +x /opt/play/play-${PLAY_VERSION}/play && \
-	# Define as first alternative
-	update-alternatives --install /usr/bin/play play /opt/play/play-${PLAY_VERSION}/play 1
+	chmod +x /opt/play/play-${PLAY_VERSION}/play
 # Create application folder
 RUN mkdir -p /app
 
 WORKDIR /app
 
 EXPOSE 9000
+
+HEALTHCHECK --interval=30s --timeout=3s \
+	CMD curl --fail http://localhost:9000/ || exit 1
 
 # Define entrypoint
 ENTRYPOINT ["/opt/play/play-1.4.4/play"]

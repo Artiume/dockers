@@ -4,7 +4,7 @@
 
 ## Supported tags
 
-* `12`, `12.0`, `12.0.2`, `latest` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/nextcloud-smb/12/0/2/Dockerfile))
+* `12`, `12.0`, `12.0.3`, `latest` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/nextcloud-smb/12.0/apache/Dockerfile))
 
 ## How to use this image
 

@@ -1,10 +1,7 @@
 FROM nginx:1.13.5-alpine
-#FROM php:7.1.9-fpm-alpine
 
 ENV PHP_VERSION "7.1.9"
 ENV PHP_SOURCES "http://fr2.php.net/distributions/php-7.1.9.tar.gz"
-ENV NGINX_VERSION "1.10.1"
-ENV NGINX_SOURCES "http://nginx.org/download/nginx-1.10.1.tar.gz"
 ENV WIKI_VERSION "2017-02-19e"
 ENV WIKI_SOURCES "https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz"
 

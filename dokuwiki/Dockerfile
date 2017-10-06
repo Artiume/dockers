@@ -52,6 +52,16 @@ RUN curl --fail --silent --show-error --location --remote-name ${WIKI_SOURCES} &
     chown -R nginx:nginx /usr/share/nginx/html && \
     rm /usr/share/nginx/html/index.html
 
+VOLUME /usr/share/nginx/html/data/attic
+VOLUME /usr/share/nginx/html/data/conf
+VOLUME /usr/share/nginx/html/data/media
+VOLUME /usr/share/nginx/html/data/media_attic
+VOLUME /usr/share/nginx/html/data/media_meta
+VOLUME /usr/share/nginx/html/data/meta
+VOLUME /usr/share/nginx/html/data/pages
+
+EXPOSE 80
+
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
 

@@ -2,7 +2,7 @@
 
 ## Supported tags
 
-* `2017-02-19e`, `latest` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/dokuwiki/Dockerfile)))
+* `2017-02-19e`, `latest` ([Dockerfile](https://github.com/xylphid/dockers/blob/master/dokuwiki/Dockerfile))
 ## How to use this image
 
 ### Mounting project

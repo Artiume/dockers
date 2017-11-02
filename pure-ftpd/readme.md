@@ -48,6 +48,21 @@ Here are supported environments variable and its definition :
 
 To make your data persistent, you will need to mount this volumes :
 * `/opt/pure/datas/` : root directory for virtual users
+* `/opt/pure/secure/` : âssword DB directory
+
+## How to create new users
+
+Connect to the container shell :
+`docker exec -it some-name /bin/sh`
+
+You can create new users using the `pure-pw` built-in command :
+`pure-pw useradd [username] -u pure -d /opt/pure/datas/[username]`
+
+Options explained :
+* **-u :** Uid
+* **-d :** Home directory. Make sure the directory exists.
+
+You can find more options in the usage message.
 
 ## Quick reference
 

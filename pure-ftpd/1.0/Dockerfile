@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-ENV VERSION = "1.0.46"
+ENV VERSION = "1.0.46-r1"
 
 LABEL maintainer.name="Anthony PERIQUET"
 LABEL maintainer.email="anthony@periquet.net"

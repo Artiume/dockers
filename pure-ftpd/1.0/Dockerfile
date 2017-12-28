@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 ENV VERSION = "1.0.46-r1"
 
@@ -11,7 +11,8 @@ ENV DEFAULT_USR		"username"
 ENV DEFAULT_PWD		"password"
 ENV DEFAULT_ROOT	"/opt/pure/datas/"
 
-RUN apk add expect pure-ftpd --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ && \
+RUN apk add libressl --update-cache && \
+    apk add expect pure-ftpd --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ && \
 	mkdir -p /opt/pure/secure/ && \
 	mkdir -p /opt/pure/datas/ && \
 	adduser -HD -s /etc pure pftp

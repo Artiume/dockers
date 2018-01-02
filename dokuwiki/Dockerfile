@@ -59,11 +59,13 @@ VOLUME /usr/share/nginx/html/data/media_attic
 VOLUME /usr/share/nginx/html/data/media_meta
 VOLUME /usr/share/nginx/html/data/meta
 VOLUME /usr/share/nginx/html/data/pages
+VOLUME /usr/share/nginx/html/lib/plugins
+VOLUME /usr/share/nginx/html/lib/tpl
 
 EXPOSE 80
 
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
+RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
 
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 CMD [ "nginx", "-g", "daemon off;" ]

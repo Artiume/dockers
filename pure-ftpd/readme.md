@@ -33,7 +33,7 @@ Then you can hit `ftp://localhost/` or `ftp://host-ip`in your explorator.
         image: xylphid/pure-ftpd:1.0.46-alpine
         labels:
           - "traefik.backend=my-project"
-          - "traefik.frontend.rule=Host:my-project.domain.ldt"
+          - "traefik.frontend.rule=Host:my-project.domain.tld"
           - "traefik.port=21"
         restart: always
 

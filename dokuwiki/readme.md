@@ -32,7 +32,7 @@ Then you can hit `http://localhost/` or `http://host-ip`in your browser.
         image: xylphid/dokuwiki:latest
         labels:
           - "traefik.backend=my-project"
-          - "traefik.frontend.rule=Host:my-project.domain.ldt"
+          - "traefik.frontend.rule=Host:my-project.domain.tld"
           - "traefik.port=80"
         restart: always
 

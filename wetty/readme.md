@@ -37,7 +37,7 @@ Then you can hit `http://localhost/` or `http://host-ip`in your browser and log 
         image: xylphid/wetty:latest
         labels:
           - "traefik.backend=my-project"
-          - "traefik.frontend.rule=Host:my-project.domain.ldt"
+          - "traefik.frontend.rule=Host:my-project.domain.tld"
           - "traefik.port=3000"
         restart: always
 

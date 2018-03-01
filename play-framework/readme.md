@@ -38,7 +38,7 @@ Then you can hit `http://localhost/` or `http://host-ip`in your browser.
         image: xylphid/play-framework:1.4.4
         labels:
           - "traefik.backend=my-project"
-          - "traefik.frontend.rule=Host:my-project.domain.ldt"
+          - "traefik.frontend.rule=Host:my-project.domain.tld"
           - "traefik.port=9000"
         restart: always
         volumes:

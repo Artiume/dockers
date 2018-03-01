@@ -1,4 +1,4 @@
-FROM nextcloud:12.0.3
+FROM nextcloud:12.0.4
 
 LABEL maintainer.name="Anthony PERIQUET"
 LABEL maintainer.email="anthony@periquet.net"

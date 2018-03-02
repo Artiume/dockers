@@ -21,16 +21,16 @@ ENV COZY_APPS               "drive,photos,collect,settings"
 ENV COZY_DOMAIN             "mycozy.tld"
 
 ENV COZY_PORT               "8080"
-ENV COZY_ADMIN_HOST         "manage.mycozy.tld"
+ENV COZY_ADMIN_HOST         "0.0.0.0"
 ENV COZY_ADMIN_PORT         "6060"
 ENV COZY_ADMIN_PASSPHRASE   "XXX"
 ENV COZY_COUCHDB_URL        "http://couchdb:5984/"
 ENV COZY_MAIL_REPLY         "noreply@localhost"
 ENV COZY_MAIL_REPLY_NAME    "noreply@localhost"
-ENV COZY_SMTP_HOST          "smtp.home"
+ENV COZY_SMTP_HOST
 ENV COZY_SMTP_PORT          "465"
-ENV COZY_SMTP_USERNAME      "username"
-ENV COZY_SMTP_PASSWORD      "password"
+ENV COZY_SMTP_USERNAME
+ENV COZY_SMTP_PASSWORD
 ENV COZY_SMTP_TLS_ENABLE    "false"
 
 COPY --from=builder /go/bin/cozy-stack /tmp/cozy-stack
@@ -54,4 +54,4 @@ RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
 
 VOLUME /var/datas
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT [ "docker-entrypoint.sh" ]

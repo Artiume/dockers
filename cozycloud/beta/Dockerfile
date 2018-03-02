@@ -27,10 +27,10 @@ ENV COZY_ADMIN_PASSPHRASE   "XXX"
 ENV COZY_COUCHDB_URL        "http://couchdb:5984/"
 ENV COZY_MAIL_REPLY         "noreply@localhost"
 ENV COZY_MAIL_REPLY_NAME    "noreply@localhost"
-ENV COZY_SMTP_HOST
+ENV COZY_SMTP_HOST          ""
 ENV COZY_SMTP_PORT          "465"
-ENV COZY_SMTP_USERNAME
-ENV COZY_SMTP_PASSWORD
+ENV COZY_SMTP_USERNAME      ""
+ENV COZY_SMTP_PASSWORD      ""
 ENV COZY_SMTP_TLS_ENABLE    "false"
 
 COPY --from=builder /go/bin/cozy-stack /tmp/cozy-stack

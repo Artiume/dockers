@@ -3,9 +3,14 @@
 echo "Initialize cozy-core"
 
 # Initialize Database
-curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}_users
-curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}_replicator
-curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}_global_changes
+until curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}; do
+	echo "Database is unreachable !"
+	echo "Will try in 10 seconds ..."
+	sleep 10
+done
+curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}/_users
+curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}/_replicator
+curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}/_global_changes
 
 # Run server
 su cozy -c "cozy-stack serve  --config /etc/cozy/cozy.yml" &

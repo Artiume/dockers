@@ -25,7 +25,7 @@ RUN git clone https://github.com/krishnasrinivas/wetty /opt/wetty && \
 
 # Create ssh user
 RUN addgroup ${GROUP} && \
-	adduser --system --ingroup ${GROUP} --home /home/${USER} --shell ${SHELL} -D ${USER} && \
+	adduser --system --ingroup ${GROUP} --home /home/${USER} --shell ${SHELL} --disabled-password ${USER} && \
 	echo "${USER}:${PASS}" | chpasswd
 
 WORKDIR /opt/wetty

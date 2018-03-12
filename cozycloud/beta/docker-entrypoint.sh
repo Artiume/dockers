@@ -3,7 +3,7 @@
 echo "Initialize cozy-core"
 
 # Initialize Database
-until curl --fail --silent --show-error -X PUT ${COZY_COUCHDB_URL}; do
+until curl --fail --silent --show-error ${COZY_COUCHDB_URL}; do
 	echo "Database is unreachable !"
 	echo "Will try in 10 seconds ..."
 	sleep 10

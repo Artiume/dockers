@@ -10,8 +10,8 @@ LABEL description="Pure-FTPd is a fast, production-quality, standard-conformant 
 ENV DEFAULT_USR             "username"
 ENV DEFAULT_PWD             "password"
 ENV DEFAULT_ROOT            "/opt/pure/datas/"
-ENV FTP_CLIENTS             5
-ENV FTP_CONNECTIONS         5
+ENV FTP_CLIENTS             50
+ENV FTP_CONNECTIONS         10
 
 RUN apk update && \
     apk add --upgrade apk-tools  && \

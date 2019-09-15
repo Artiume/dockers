@@ -1,6 +1,5 @@
-FROM alpine:edge
-
-ENV VERSION = "1.0.47-r1"
+FROM alpine:latest
+ENV VERSION = "1.0.49-r0"
 
 LABEL maintainer.name="Anthony PERIQUET"
 LABEL maintainer.email="anthony@periquet.net"
